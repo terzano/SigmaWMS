@@ -1,0 +1,30 @@
+/*	grid64
+	- a fork of SimpleGrid by Conor Muirhead (http://simplegrid.info) / CSSGrid by Crowd Favorite (https://github.com/crowdfavorite/css-grid)
+	- by Malte Mayrberger (http://mayrberger.com)
+	- License: http://creativecommons.org/licenses/MIT/	*/
+
+/* Containers */
+body {
+	background: #f0c6d9  url('../images/1220_grid_bg.png') top center repeat;
+	font-size: 1.125em;
+}
+
+.grid64 {
+	margin: 0 auto;
+	padding: 0 0 0 20px;
+	width:1200px;
+}
+
+/* 6-Col Grid Sizes */
+.block-1,.block-2,.block-3,.block-4,.block-5,.block-6 {width: 180px;} /* Sixths */
+.block-1-2,.block-2-3,.block-3-4,.block-4-5,.block-5-6 {width: 380px;} /* Thirds */
+.block-1-2-3-4,.block-2-3-4-5,.block-3-4-5-6 {width: 780px;} /* Two-Thirds */
+.block-1-2-3-4-5,.block-2-3-4-5-6 {width: 980px;} /* Five-Sixths */
+
+/* 4-Col Grid Sizes */
+.block-7,.block-8,.block-9,.block-10 {width: 280px;} /* Quarters */
+.block-7-8-9,.block-8-9-10 {width:880px;} /* Three-Quarters */
+
+/* 6-Col/4-Col Shared Grid Sizes */
+.block-1-2-3,.block-2-3-4,.block-3-4-5,.block-4-5-6, .block-7-8,.block-8-9,.block-9-10 {width: 580px;} /* Halves */
+.block-1-2-3-4-5-6, .block-7-8-9-10 {width: 1180px;} /* Full-Width */

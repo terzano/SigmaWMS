@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5B7F0194-D787-42A9-8DA3-28DBF59B34CF}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sigma.Web</RootNamespace>
+    <AssemblyName>Sigma.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.2.6.3.862\lib\NET40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Configuration">
+      <HintPath>..\packages\Autofac.2.6.3.862\lib\NET40\Autofac.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc">
+      <HintPath>..\packages\Autofac.Mvc4.2.6.2.859\lib\NET40\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.2.2.0\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Elmah">
+      <HintPath>..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="Elmah.Mvc">
+      <HintPath>..\packages\Elmah.MVC.2.0.1\lib\net40\Elmah.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="ModelMetadataExtensions">
+      <HintPath>..\packages\ModelMetadataExtensionsWithBugfix.0.1.2\lib\net40\ModelMetadataExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.4.5.9\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RouteDebugger">
+      <HintPath>..\packages\routedebugger.2.1.4.0\lib\net40\RouteDebugger.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\CommonAssemblyInfo.cs">
+      <Link>CommonAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Dashboard\DashboardAreaRegistration.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Areas\Admin\Views\Web.config" />
+    <Content Include="Areas\Dashboard\Views\Web.config" />
+    <None Include="Public\js\lib\jquery.intellisense.js">
+      <DependentUpon>jquery.js</DependentUpon>
+    </None>
+    <Content Include="Public\css\bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="Public\css\bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="Public\css\bootstrap\styles\bootstrap-responsive.css" />
+    <Content Include="Public\css\bootstrap\styles\bootstrap-responsive.min.css" />
+    <Content Include="Public\css\bootstrap\styles\bootstrap.css" />
+    <Content Include="Public\css\bootstrap\styles\bootstrap.min.css" />
+    <Content Include="Public\css\grids\grid64\1220_grid.css" />
+    <Content Include="Public\css\grids\grid64\1580_grid.css" />
+    <Content Include="Public\css\grids\grid64\560_grid.css" />
+    <Content Include="Public\css\grids\grid64\740_grid.css" />
+    <Content Include="Public\css\grids\grid64\980_grid.css" />
+    <Content Include="Public\css\grids\grid64\base.css" />
+    <Content Include="Public\css\grids\images\1220_grid_bg.png" />
+    <Content Include="Public\css\grids\images\1580_grid_bg.png" />
+    <Content Include="Public\css\grids\images\560_grid_bg.png" />
+    <Content Include="Public\css\grids\images\740_grid_bg.png" />
+    <Content Include="Public\css\grids\images\980_grid_bg.png" />
+    <Content Include="Public\css\grids\images\block_bg.png" />
+    <Content Include="Public\css\grids\images\grid_bg.png" />
+    <Content Include="Public\css\jqueryui\redmond\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Public\css\jqueryui\redmond\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Public\css\jqueryui\redmond\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Public\css\jqueryui\redmond\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Public\css\jqueryui\redmond\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Public\css\jqueryui\redmond\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Public\css\jqueryui\redmond\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Public\css\jqueryui\redmond\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Public\css\jqueryui\redmond\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Public\css\jqueryui\redmond\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Public\css\jqueryui\redmond\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Public\css\jqueryui\redmond\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Public\css\jqueryui\redmond\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Public\css\jqueryui\redmond\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Public\css\jqueryui\redmond\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Public\css\jqueryui\redmond\jquery-ui.css" />
+    <Content Include="Public\css\jqueryui\start\images\ui-bg_flat_55_999999_40x100.png" />
+    <Content Include="Public\css\jqueryui\start\images\ui-bg_flat_75_aaaaaa_40x100.png" />
+    <Content Include="Public\css\jqueryui\start\images\ui-bg_glass_45_0078ae_1x400.png" />
+    <Content Include="Public\css\jqueryui\start\images\ui-bg_glass_55_f8da4e_1x400.png" />
+    <Content Include="Public\css\jqueryui\start\images\ui-bg_glass_75_79c9ec_1x400.png" />
+    <Content Include="Public\css\jqueryui\start\images\ui-bg_gloss-wave_45_e14f1c_500x100.png" />
+    <Content Include="Public\css\jqueryui\start\images\ui-bg_gloss-wave_50_6eac2c_500x100.png" />
+    <Content Include="Public\css\jqueryui\start\images\ui-bg_gloss-wave_75_2191c0_500x100.png" />
+    <Content Include="Public\css\jqueryui\start\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Public\css\jqueryui\start\images\ui-icons_0078ae_256x240.png" />
+    <Content Include="Public\css\jqueryui\start\images\ui-icons_056b93_256x240.png" />
+    <Content Include="Public\css\jqueryui\start\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Public\css\jqueryui\start\images\ui-icons_e0fdff_256x240.png" />
+    <Content Include="Public\css\jqueryui\start\images\ui-icons_f5e175_256x240.png" />
+    <Content Include="Public\css\jqueryui\start\images\ui-icons_f7a50d_256x240.png" />
+    <Content Include="Public\css\jqueryui\start\images\ui-icons_fcd113_256x240.png" />
+    <Content Include="Public\css\jqueryui\start\jquery-ui.css" />
+    <Content Include="Public\css\keyboard\keyboard.css" />
+    <Content Include="Public\css\widgets\fancybox\blank.gif" />
+    <Content Include="Public\css\widgets\fancybox\fancybox_loading.gif" />
+    <Content Include="Public\css\widgets\fancybox\fancybox_overlay.png" />
+    <Content Include="Public\css\widgets\fancybox\fancybox_sprite.png" />
+    <Content Include="Public\css\widgets\fancybox\helpers\fancybox_buttons.png" />
+    <Content Include="Public\css\widgets\fancybox\helpers\jquery.fancybox-buttons.css" />
+    <Content Include="Public\css\widgets\fancybox\helpers\jquery.fancybox-buttons.js" />
+    <Content Include="Public\css\widgets\fancybox\helpers\jquery.fancybox-media.js" />
+    <Content Include="Public\css\widgets\fancybox\helpers\jquery.fancybox-thumbs.css" />
+    <Content Include="Public\css\widgets\fancybox\helpers\jquery.fancybox-thumbs.js" />
+    <Content Include="Public\css\widgets\fancybox\jquery.fancybox.css" />
+    <Content Include="Public\css\widgets\tipTip.css" />
+    <Content Include="Public\css\widgets\toastr-responsive.css" />
+    <Content Include="Public\css\widgets\toastr.css" />
+    <Content Include="Public\js\charts\adapters\mootools-adapter.js" />
+    <Content Include="Public\js\charts\adapters\mootools-adapter.src.js" />
+    <Content Include="Public\js\charts\adapters\prototype-adapter.js" />
+    <Content Include="Public\js\charts\adapters\prototype-adapter.src.js" />
+    <Content Include="Public\js\charts\highcharts-more.js" />
+    <Content Include="Public\js\charts\highcharts.js" />
+    <Content Include="Public\js\charts\highcharts.min.js">
+      <DependentUpon>highcharts.js</DependentUpon>
+    </Content>
+    <Content Include="Public\js\charts\modules\canvas-tools.js" />
+    <Content Include="Public\js\charts\modules\canvas-tools.src.js" />
+    <Content Include="Public\js\charts\modules\data.js" />
+    <Content Include="Public\js\charts\modules\data.src.js" />
+    <Content Include="Public\js\charts\modules\exporting.js" />
+    <Content Include="Public\js\charts\modules\exporting.src.js" />
+    <Content Include="Public\js\charts\themes\dark-blue.js" />
+    <Content Include="Public\js\charts\themes\dark-green.js" />
+    <Content Include="Public\js\charts\themes\gray.js" />
+    <Content Include="Public\js\charts\themes\grid.js" />
+    <Content Include="Public\js\charts\themes\skies.js" />
+    <Content Include="Public\js\globals.js" />
+    <Content Include="Public\js\jqueryui\jquery-ui.js" />
+    <Content Include="Public\js\jqueryui\jquery-ui.min.js">
+      <DependentUpon>jquery-ui.js</DependentUpon>
+    </Content>
+    <None Include="Public\js\lib\amplify-vsdoc.js">
+      <DependentUpon>amplify.js</DependentUpon>
+    </None>
+    <Content Include="Public\js\keyboard\jquery.keyboard.extension-autocomplete.js" />
+    <Content Include="Public\js\keyboard\jquery.keyboard.extension-mobile.js" />
+    <Content Include="Public\js\keyboard\jquery.keyboard.extension-navigation.js" />
+    <Content Include="Public\js\keyboard\jquery.keyboard.extension-typing.js" />
+    <Content Include="Public\js\keyboard\jquery.keyboard.js" />
+    <Content Include="Public\js\keyboard\jquery.keyboard.min.js">
+      <DependentUpon>jquery.keyboard.js</DependentUpon>
+    </Content>
+    <Content Include="Public\js\keyboard\jquery.mousewheel.js" />
+    <Content Include="Public\js\keyboard\layouts\albanian.js" />
+    <Content Include="Public\js\keyboard\layouts\arabic.js" />
+    <Content Include="Public\js\keyboard\layouts\belarusian.js" />
+    <Content Include="Public\js\keyboard\layouts\bengali.js" />
+    <Content Include="Public\js\keyboard\layouts\bulgarian.js" />
+    <Content Include="Public\js\keyboard\layouts\catalan.js" />
+    <Content Include="Public\js\keyboard\layouts\danish.js" />
+    <Content Include="Public\js\keyboard\layouts\french.js" />
+    <Content Include="Public\js\keyboard\layouts\german.js" />
+    <Content Include="Public\js\keyboard\layouts\hebrew.js" />
+    <Content Include="Public\js\keyboard\layouts\hungarian.js" />
+    <Content Include="Public\js\keyboard\layouts\hungarianansi.js" />
+    <Content Include="Public\js\keyboard\layouts\japanese.js" />
+    <Content Include="Public\js\keyboard\layouts\latvian.js" />
+    <Content Include="Public\js\keyboard\layouts\polish.js" />
+    <Content Include="Public\js\keyboard\layouts\russian.js" />
+    <Content Include="Public\js\keyboard\layouts\spanish.js" />
+    <Content Include="Public\js\keyboard\layouts\swedish.js" />
+    <Content Include="Public\js\keyboard\layouts\turkish.js" />
+    <Content Include="Public\js\lib\amplify.js" />
+    <Content Include="Public\js\lib\amplify.min.js">
+      <DependentUpon>amplify.js</DependentUpon>
+    </Content>
+    <Content Include="Public\js\lib\jquery.fancybox.js" />
+    <Content Include="Public\js\lib\jquery.fancybox.min.js">
+      <DependentUpon>jquery.fancybox.js</DependentUpon>
+    </Content>
+    <Content Include="Public\js\lib\jquery.hotkeys.js" />
+    <Content Include="Public\js\lib\jquery.hotkeys.min.js">
+      <DependentUpon>jquery.hotkeys.js</DependentUpon>
+    </Content>
+    <Content Include="Public\js\lib\jquery.js" />
+    <Content Include="Public\js\lib\jquery.min.js">
+      <DependentUpon>jquery.js</DependentUpon>
+    </Content>
+    <Content Include="Public\js\lib\jquery.tinycarousel.js" />
+    <Content Include="Public\js\lib\jquery.tinycarousel.min.js">
+      <DependentUpon>jquery.tinycarousel.js</DependentUpon>
+    </Content>
+    <Content Include="Public\js\lib\jquery.tipTip.min.js" />
+    <Content Include="Public\js\lib\jquery.unobtrusive-ajax.js" />
+    <Content Include="Public\js\lib\jquery.unobtrusive-ajax.min.js">
+      <DependentUpon>jquery.unobtrusive-ajax.js</DependentUpon>
+    </Content>
+    <None Include="Public\js\lib\jquery.validate-vsdoc.js">
+      <DependentUpon>jquery.validate.js</DependentUpon>
+    </None>
+    <Content Include="Public\js\lib\jquery.validate.js" />
+    <Content Include="Public\js\lib\jquery.validate.min.js">
+      <DependentUpon>jquery.validate.js</DependentUpon>
+    </Content>
+    <Content Include="Public\js\lib\jquery.validate.unobtrusive.js" />
+    <Content Include="Public\js\lib\jquery.validate.unobtrusive.min.js">
+      <DependentUpon>jquery.validate.unobtrusive.js</DependentUpon>
+    </Content>
+    <Content Include="Public\js\lib\jquerypp.js" />
+    <Content Include="Public\js\lib\jquerypp.min.js">
+      <DependentUpon>jquerypp.js</DependentUpon>
+    </Content>
+    <Content Include="Public\js\lib\lodash.js" />
+    <Content Include="Public\js\lib\lodash.min.js">
+      <DependentUpon>lodash.js</DependentUpon>
+    </Content>
+    <Content Include="Public\js\lib\moment.js" />
+    <Content Include="Public\js\lib\moment.min.js">
+      <DependentUpon>moment.js</DependentUpon>
+    </Content>
+    <Content Include="Public\js\lib\toastr.js" />
+    <Content Include="Public\js\lib\toastr.min.js">
+      <DependentUpon>toastr.js</DependentUpon>
+    </Content>
+    <Content Include="Public\js\polyfills\html5.js" />
+    <Content Include="Public\js\polyfills\html5.min.js">
+      <DependentUpon>html5.js</DependentUpon>
+    </Content>
+    <Content Include="Public\js\polyfills\IE9.js" />
+    <Content Include="Public\js\polyfills\jquery.watermark.js" />
+    <Content Include="Public\js\polyfills\jquery.watermark.min.js">
+      <DependentUpon>jquery.watermark.js</DependentUpon>
+    </Content>
+    <Content Include="Public\js\polyfills\json2.js" />
+    <Content Include="Public\js\polyfills\json2.min.js">
+      <DependentUpon>json2.js</DependentUpon>
+    </Content>
+    <Content Include="Public\js\polyfills\modernizr.js" />
+    <Content Include="Public\js\polyfills\modernizr.min.js">
+      <DependentUpon>modernizr.js</DependentUpon>
+    </Content>
+    <Content Include="Public\js\tmpl\handlebars.js" />
+    <Content Include="Public\js\tmpl\handlebars.min.js">
+      <DependentUpon>handlebars.js</DependentUpon>
+    </Content>
+    <Content Include="Public\js\ui\bootstrap.js" />
+    <Content Include="Public\js\ui\bootstrap.min.js">
+      <DependentUpon>bootstrap.js</DependentUpon>
+    </Content>
+    <Content Include="Public\js\ui\i18n\jquery-ui-i18n.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-af.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-ar-DZ.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-ar.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-az.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-bg.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-bs.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-ca.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-cs.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-cy-GB.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-da.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-de.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-el.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-en-AU.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-en-GB.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-en-NZ.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-eo.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-es.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-et.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-eu.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-fa.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-fi.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-fo.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-fr-CH.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-fr.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-gl.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-he.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-hi.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-hr.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-hu.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-hy.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-id.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-is.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-it.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-ja.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-ka.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-kk.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-km.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-ko.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-lb.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-lt.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-lv.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-mk.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-ml.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-ms.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-nl-BE.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-nl.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-no.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-pl.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-pt-BR.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-pt.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-rm.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-ro.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-ru.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-sk.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-sl.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-sq.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-sr-SR.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-sr.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-sv.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-ta.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-th.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-tj.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-tr.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-uk.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-vi.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-zh-CN.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-zh-HK.js" />
+    <Content Include="Public\js\ui\i18n\jquery.ui.datepicker-zh-TW.js" />
+    <Content Include="Public\js\ui\jquery-ui.js" />
+    <Content Include="Public\js\ui\jquery-ui.min.js">
+      <DependentUpon>jquery-ui.js</DependentUpon>
+    </Content>
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Public\css\site.css" />
+    <Content Include="Public\js\_references.js" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Controllers\" />
+    <Folder Include="Areas\Admin\Views\Shared\" />
+    <Folder Include="Areas\Dashboard\Controllers\" />
+    <Folder Include="Areas\Dashboard\Views\Shared\" />
+    <Folder Include="Public\css\page\" />
+    <Folder Include="Public\img\" />
+    <Folder Include="Public\js\core\" />
+    <Folder Include="Public\js\page\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:62027/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

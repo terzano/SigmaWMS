@@ -1,0 +1,114 @@
+/*	grid64
+	- a fork of SimpleGrid by Conor Muirhead (http://simplegrid.info) / CSSGrid by Crowd Favorite (https://github.com/crowdfavorite/css-grid)
+	- by Malte Mayrberger (http://mayrberger.com)
+	- License: http://creativecommons.org/licenses/MIT/	*/
+
+/* Containers */
+body {
+	background: #e1f1c7 url('../images/560_grid_bg.png') top center repeat;
+	font-size: 0.825em;
+	padding: 0;
+}
+
+.grid64 {
+	background: url('../images/grid_bg.png') top center repeat;
+	margin: 0 auto;
+	padding: 0 0 0 20px;
+	width: 540px;
+}
+
+.row {
+	clear:left;
+}
+
+/* Blocks Setup */
+.block-1,.block-1-2,.block-1-2-3,.block-1-2-3-4,.block-1-2-3-4-5,.block-1-2-3-4-5-6,
+.block-2,.block-2-3,.block-2-3-4,.block-2-3-4-5,.block-2-3-4-5-6,
+.block-3,.block-3-4,.block-3-4-5,.block-3-4-5-6,
+.block-4,.block-4-5,.block-4-5-6,
+.block-5,.block-5-6,
+.block-6,
+.block-7,.block-7-8,.block-7-8-9,.block-7-8-9-10,
+.block-8,.block-8-9,.block-8-9-10,
+.block-9,.block-9-10,
+.block-10 {
+	display: inline;
+	float: left;
+	margin-left: 20px;
+}
+
+/* 6-Column Grid Sizes */
+.block-1,.block-2,.block-3,.block-4,.block-5,.block-6 {width: 70px;} /* Sixths */
+.block-1-2,.block-2-3,.block-3-4,.block-4-5,.block-5-6 {width: 160px;} /* Thirds */
+.block-1-2-3-4,.block-2-3-4-5,.block-3-4-5-6 {width: 340px;} /* Two-Thirds */
+.block-1-2-3-4-5,.block-2-3-4-5-6 {width: 430px;} /* Five-Sixths */
+
+/* 4-Column Grid Sizes */
+.block-7,.block-8,.block-9,.block-10 {width: 115px;} /* Quarters */
+.block-7-8-9,.block-8-9-10 {width: 385px;} /* Three-Quarters */
+
+/* 6-Column and 4-Column Shared Grid Sizes */
+.block-1-2-3,.block-2-3-4,.block-3-4-5,.block-4-5-6, .block-7-8,.block-8-9,.block-9-10 {width: 250px;} /* Halves */
+.block-1-2-3-4-5-6, .block-7-8-9-10 {width: 520px;} /* Full-Width */
+
+/* Zeroing Out Leftmost Block Margins */
+.block-1,.block-1-2,.block-1-2-3,.block-1-2-3-4,.block-1-2-3-4-5,.block-1-2-3-4-5-6,
+.block-7,.block-7-8,.block-7-8-9,.block-7-8-9-10,
+.block-2 .block-2,
+.block-2-3 .block-2,
+.block-2-3 .block-2-3,
+.block-2-3-4 .block-2,
+.block-2-3-4 .block-2-3,
+.block-2-3-4 .block-2-3-4,
+.block-2-3-4-5 .block-2,
+.block-2-3-4-5 .block-2-3,
+.block-2-3-4-5 .block-2-3-4,
+.block-2-3-4-5 .block-2-3-4-5,
+.block-2-3-4-5-6 .block-2,
+.block-2-3-4-5-6 .block-2-3,
+.block-2-3-4-5-6 .block-2-3-4,
+.block-2-3-4-5-6 .block-2-3-4-5,
+.block-2-3-4-5-6 .block-2-3-4-5-6,
+.block-3 .block-3,
+.block-3-4 .block-3,
+.block-3-4 .block-3-4,
+.block-3-4-5 .block-3,
+.block-3-4-5 .block-3-4,
+.block-3-4-5 .block-3-4-5,
+.block-3-4-5-6 .block-3,
+.block-3-4-5-6 .block-3-4,
+.block-3-4-5-6 .block-3-4-5,
+.block-3-4-5-6 .block-3-4-5-6,
+.block-4 .block-4,
+.block-4-5 .block-4,
+.block-4-5 .block-4-5,
+.block-4-5-6 .block-4,
+.block-4-5-6 .block-4-5,
+.block-4-5-6 .block-4-5-6,
+.block-5 .block-5,
+.block-5-6 .block-5,
+.block-5-6 .block-5-6,
+.block-6 .block-6,
+.block-8 .block-8,
+.block-8-9 .block-8,
+.block-8-9 .block-8-9,
+.block-8-9-10 .block-8,
+.block-8-9-10 .block-8-9,
+.block-8-9-10 .block-8-9-10,
+.block-9 .block-9,
+.block-9-10 .block-9,
+.block-9-10 .block-9-10 {margin-left:0 !important;} /* Important is to avoid repeating this in larger screen css files */
+
+/* Row Clearfix */
+.row:after {
+	clear: both;
+	content: " ";
+	display: block;
+	font-size: 0;
+	height: 0;
+	visibility: hidden;
+}
+
+.row {
+	zoom: 1;
+}
