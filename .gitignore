@@ -1,3 +1,4 @@
+# General ignore files
 *.obj
 *.exe
 *.pdb
@@ -25,10 +26,11 @@ Thumbs.db
 [Rr]elease*/
 [Tt]est[Rr]esult*
 
-!deps/*.exe
+# Exclusions
+!deps/*/*.exe
+!src/.nuget/NuGet.exe
 
-# OS generated files #
-##################
+# OS generated files 
 .DS_Store
 .DS_Store?
 ._*
