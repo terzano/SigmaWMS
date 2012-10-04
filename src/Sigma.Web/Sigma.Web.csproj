@@ -163,6 +163,18 @@
     <Content Include="Global.asax" />
     <Content Include="Areas\Admin\Views\Web.config" />
     <Content Include="Areas\Dashboard\Views\Web.config" />
+    <Content Include="..\ConnectionStrings.config">
+      <Link>ConnectionStrings.config</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Settings.config">
+      <Link>Settings.config</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\NLog.dll.nlog">
+      <Link>NLog.dll.nlog</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Public\js\lib\jquery.intellisense.js">
       <DependentUpon>jquery.js</DependentUpon>
     </None>
@@ -467,6 +479,32 @@
     <Folder Include="Public\img\" />
     <Folder Include="Public\js\core\" />
     <Folder Include="Public\js\page\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sigma.Core\Sigma.Core.csproj">
+      <Project>{41d67406-bbd2-4dd5-adad-360dbe97b2bc}</Project>
+      <Name>Sigma.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sigma.Data\Sigma.Data.csproj">
+      <Project>{6d3acb35-d282-48c4-a8c0-91b0c422d523}</Project>
+      <Name>Sigma.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sigma.Domain\Sigma.Domain.csproj">
+      <Project>{26580029-7c49-4998-8755-49ce38ebbad7}</Project>
+      <Name>Sigma.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sigma.Plugins\Sigma.Plugins.csproj">
+      <Project>{74025b7f-e731-4b41-94bd-6488056634ab}</Project>
+      <Name>Sigma.Plugins</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sigma.Reporting\Sigma.Reporting.csproj">
+      <Project>{7c3d3e11-4d6b-46de-badc-536bab88de49}</Project>
+      <Name>Sigma.Reporting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sigma.Services\Sigma.Services.csproj">
+      <Project>{e1bc146f-1829-4f74-ab51-bc09c37f9ecb}</Project>
+      <Name>Sigma.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

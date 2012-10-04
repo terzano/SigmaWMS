@@ -56,6 +56,36 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sigma.Api\Sigma.Api.csproj">
+      <Project>{df50afcd-cad6-4bde-a3d6-7b9d4975a417}</Project>
+      <Name>Sigma.Api</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sigma.Core\Sigma.Core.csproj">
+      <Project>{41d67406-bbd2-4dd5-adad-360dbe97b2bc}</Project>
+      <Name>Sigma.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sigma.Data\Sigma.Data.csproj">
+      <Project>{6d3acb35-d282-48c4-a8c0-91b0c422d523}</Project>
+      <Name>Sigma.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sigma.Domain\Sigma.Domain.csproj">
+      <Project>{26580029-7c49-4998-8755-49ce38ebbad7}</Project>
+      <Name>Sigma.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sigma.Plugins\Sigma.Plugins.csproj">
+      <Project>{74025b7f-e731-4b41-94bd-6488056634ab}</Project>
+      <Name>Sigma.Plugins</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sigma.Reporting\Sigma.Reporting.csproj">
+      <Project>{7c3d3e11-4d6b-46de-badc-536bab88de49}</Project>
+      <Name>Sigma.Reporting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sigma.Services\Sigma.Services.csproj">
+      <Project>{e1bc146f-1829-4f74-ab51-bc09c37f9ecb}</Project>
+      <Name>Sigma.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

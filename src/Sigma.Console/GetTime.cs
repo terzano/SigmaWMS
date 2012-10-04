@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using ManyConsole;
+using Sigma.Core;
 
 namespace Sigma.Console
 {
@@ -13,13 +14,15 @@ namespace Sigma.Console
     {
         public GetTime()
         {
-            this.IsCommand("get-time", "Returns the current system time.");
+            this.IsCommand("get-time", "Returns the current system time");
         }
 
         public override int Run(string[] remainingArguments)
         {
             System.Console.WriteLine(DateTime.UtcNow);
-           
+            var nlog = new NLogLogger();
+            nlog.Info("Testing Logger");
+
             return 0;
         }
     }

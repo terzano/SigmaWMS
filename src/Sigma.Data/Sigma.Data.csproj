@@ -61,6 +61,16 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sigma.Core\Sigma.Core.csproj">
+      <Project>{41d67406-bbd2-4dd5-adad-360dbe97b2bc}</Project>
+      <Name>Sigma.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sigma.Domain\Sigma.Domain.csproj">
+      <Project>{26580029-7c49-4998-8755-49ce38ebbad7}</Project>
+      <Name>Sigma.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

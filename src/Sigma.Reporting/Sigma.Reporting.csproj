@@ -654,6 +654,24 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sigma.Core\Sigma.Core.csproj">
+      <Project>{41d67406-bbd2-4dd5-adad-360dbe97b2bc}</Project>
+      <Name>Sigma.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sigma.Data\Sigma.Data.csproj">
+      <Project>{6d3acb35-d282-48c4-a8c0-91b0c422d523}</Project>
+      <Name>Sigma.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sigma.Domain\Sigma.Domain.csproj">
+      <Project>{26580029-7c49-4998-8755-49ce38ebbad7}</Project>
+      <Name>Sigma.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sigma.Services\Sigma.Services.csproj">
+      <Project>{e1bc146f-1829-4f74-ab51-bc09c37f9ecb}</Project>
+      <Name>Sigma.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

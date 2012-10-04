@@ -21,14 +21,14 @@ namespace Sigma.Console
     {
         static int Main(string[] args)
         {
-            // aocate commands avaiable
+            // Locate commands avaiable
             var commands = GetCommands();
 
-            // allows to execute commands from an internal console
+            // Allows to execute commands from an internal console
             ConsoleModeCommand consoleRunner = new ConsoleModeCommand(GetCommands);
             commands = commands.Concat(new[] { consoleRunner });
 
-            // run the command for the console input
+            // Run the command for the console input
             return ConsoleCommandDispatcher.DispatchCommand(commands, args, System.Console.Out);
         }
 

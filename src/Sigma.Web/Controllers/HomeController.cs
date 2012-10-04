@@ -7,6 +7,7 @@
 #endregion
 
 #region Using Directives 
+using Sigma.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +22,8 @@ namespace Sigma.Web.Controllers
         public ActionResult Index()
         {
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
+            var nlog = new NLogLogger();
+            nlog.Info("Logger in web");
 
             return View();
         }

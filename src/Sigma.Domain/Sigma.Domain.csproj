@@ -47,6 +47,12 @@
   <ItemGroup>
     <Folder Include="Api\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sigma.Core\Sigma.Core.csproj">
+      <Project>{41d67406-bbd2-4dd5-adad-360dbe97b2bc}</Project>
+      <Name>Sigma.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
