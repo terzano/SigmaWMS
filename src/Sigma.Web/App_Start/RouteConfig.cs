@@ -28,17 +28,29 @@ namespace Sigma.Web
             routes.IgnoreRoute("{*favicon}", new { favicon = @"(.*/)?favicon.ico(/.*)?" }); //Prevent exceptions for favicon
 
             routes.MapRoute(
+                name: "Login", // Route name
+                url: "Login", // URL with parameters
+                defaults: new { controller = "Account", action = "Login", id = UrlParameter.Optional }  // Parameter defaults
+            );
+
+            routes.MapRoute(
+                name: "Logout", // Route name
+                url: "Logout", // URL with parameters
+                defaults: new { controller = "Account", action = "Logout", id = UrlParameter.Optional }  // Parameter defaults
+            );
+
+            routes.MapRoute(
                 name: "Default", // Route name
                 url: "{culture}/{controller}/{action}/{id}", // URL with parameters
                 defaults: new
                 {
                     culture = "en-US",
-                    controller = "Home",
-                    action = "Index",
+                    controller = "Menu",
+                    action = "Out",
                     id = UrlParameter.Optional,
                 },
                 namespaces: new[] { "Sigma.Web.Controllers" }
-            );  
+            );
         }
 
 

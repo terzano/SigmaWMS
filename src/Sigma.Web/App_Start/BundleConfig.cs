@@ -22,7 +22,7 @@ namespace Sigma.Web
                         "~/Public/js/lib/jquery-{version}.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
-                        "~/Public/js/jqueryui/jquery-ui-{version}.js"));
+                        "~/Public/js/ui/jquery-ui-{version}.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Public/js/lib/jquery.unobtrusive*",

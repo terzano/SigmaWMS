@@ -22,11 +22,18 @@ namespace Sigma.Web.Controllers
         //
         // GET: /Account/
 
-        public ActionResult Index()
+        public ActionResult Login()
         {
        
             return View();
         }
+
+        public ActionResult Logout()
+        {
+
+            return View();
+        }
+
 
     }
 }
