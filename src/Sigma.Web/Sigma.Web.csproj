@@ -65,7 +65,7 @@
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Newtonsoft.Json.4.5.9\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.4.5.10\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="RouteDebugger">
       <HintPath>..\packages\routedebugger.2.1.4.0\lib\net40\RouteDebugger.dll</HintPath>
@@ -153,6 +153,8 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Dashboard\DashboardAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\ReportController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -197,6 +199,23 @@
     <Content Include="Public\css\grids\images\980_grid_bg.png" />
     <Content Include="Public\css\grids\images\block_bg.png" />
     <Content Include="Public\css\grids\images\grid_bg.png" />
+    <Content Include="Public\css\jquerymobile\images\ajax-loader.gif" />
+    <Content Include="Public\css\jquerymobile\images\icons-18-black.png" />
+    <Content Include="Public\css\jquerymobile\images\icons-18-white.png" />
+    <Content Include="Public\css\jquerymobile\images\icons-36-black.png" />
+    <Content Include="Public\css\jquerymobile\images\icons-36-white.png" />
+    <Content Include="Public\css\jquerymobile\jquery.mobile.css" />
+    <Content Include="Public\css\jquerymobile\jquery.mobile.min.css">
+      <DependentUpon>jquery.mobile.css</DependentUpon>
+    </Content>
+    <Content Include="Public\css\jquerymobile\jquery.mobile.structure.css" />
+    <Content Include="Public\css\jquerymobile\jquery.mobile.structure.min.css">
+      <DependentUpon>jquery.mobile.structure.css</DependentUpon>
+    </Content>
+    <Content Include="Public\css\jquerymobile\jquery.mobile.theme.css" />
+    <Content Include="Public\css\jquerymobile\jquery.mobile.theme.min.css">
+      <DependentUpon>jquery.mobile.theme.css</DependentUpon>
+    </Content>
     <Content Include="Public\css\jqueryui\redmond\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Public\css\jqueryui\redmond\images\ui-bg_flat_55_fbec88_40x100.png" />
     <Content Include="Public\css\jqueryui\redmond\images\ui-bg_glass_75_d0e5f5_1x400.png" />
@@ -266,10 +285,6 @@
     <Content Include="Public\js\charts\themes\grid.js" />
     <Content Include="Public\js\charts\themes\skies.js" />
     <Content Include="Public\js\globals.js" />
-    <Content Include="Public\js\jqueryui\jquery-ui.js" />
-    <Content Include="Public\js\jqueryui\jquery-ui.min.js">
-      <DependentUpon>jquery-ui.js</DependentUpon>
-    </Content>
     <None Include="Public\js\lib\amplify-vsdoc.js">
       <DependentUpon>amplify.js</DependentUpon>
     </None>
@@ -451,7 +466,13 @@
     <Content Include="Public\js\ui\jquery-ui.min.js">
       <DependentUpon>jquery-ui.js</DependentUpon>
     </Content>
-    <Content Include="Web.config" />
+    <Content Include="Public\js\ui\jquery.mobile.js" />
+    <Content Include="Public\js\ui\jquery.mobile.min.js">
+      <DependentUpon>jquery.mobile.js</DependentUpon>
+    </Content>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -468,6 +489,10 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="packages.config" />
+    <Content Include="Views\Shared\_Layout.MobileHtml3.cshtml" />
+    <Content Include="Views\Home\Index.MobileHtml3.cshtml" />
+    <Content Include="Views\Menu\Out.cshtml" />
+    <Content Include="Views\Menu\Out.MobileHtml3.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -504,6 +529,10 @@
     <ProjectReference Include="..\Sigma.Services\Sigma.Services.csproj">
       <Project>{e1bc146f-1829-4f74-ab51-bc09c37f9ecb}</Project>
       <Name>Sigma.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sigma.Web.Shared\Sigma.Web.Shared.csproj">
+      <Project>{60386416-44a1-4d05-a3c2-1bb042217a29}</Project>
+      <Name>Sigma.Web.Shared</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -14,18 +14,17 @@ namespace Sigma.Web.Areas.Dashboard
 
         public override void RegisterArea(AreaRegistrationContext context)
         {
-
             context.MapRoute(
-               "Dashboard_default",
-               "Dashboard/{culture}/{controller}/{action}/{id}",
-               new
+               name: "Dashboard_default",
+               url: "Dashboard/{culture}/{controller}/{action}/{id}",
+               defaults: new
                {
-                   culture = System.Threading.Thread.CurrentThread.CurrentCulture.Name,
+                   culture = "en-US",
                    controller = "Home",
                    action = "Index",
                    id = UrlParameter.Optional
                },
-               new[] { "Sigma.Web.Areas.Dashboard.Controllers" }
+               namespaces: new[] { "Sigma.Web.Areas.Dashboard.Controllers" }
             );
 
         }

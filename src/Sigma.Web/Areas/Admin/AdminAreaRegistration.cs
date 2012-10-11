@@ -14,18 +14,17 @@ namespace Sigma.Web.Areas.Admin
 
         public override void RegisterArea(AreaRegistrationContext context)
         {
-
             context.MapRoute(
-               "Admin_default",
-               "Admin/{culture}/{controller}/{action}/{id}",
-               new
+               name: "Admin_default",
+               url: "Admin/{culture}/{controller}/{action}/{id}",
+               defaults: new
                {
-                   culture = System.Threading.Thread.CurrentThread.CurrentCulture.Name,
+                   culture = "en-US",
                    controller = "Home",
                    action = "Index",
                    id = UrlParameter.Optional
                },
-               new[] { "Sigma.Web.Areas.Admin.Controllers" }
+               namespaces: new[] { "Sigma.Web.Areas.Admin.Controllers" }
             );
 
         }
