@@ -1,6 +1,6 @@
 ﻿#region License
 //-----------------------------------------------------------------------
-// <copyright file="ReportController.cs" company="Pi2 LLC">
+// <copyright file="ChartController.cs" company="Pi2 LLC">
 //     Copyright (c) Pi2 LLC. All rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------
@@ -16,16 +16,12 @@ using System.Web.Mvc;
 
 namespace Sigma.Web.Controllers
 {
-    public class ReportController : Controller
+    public class ChartController : Controller
     {
-        
+        //
+        // GET: /Chart/
 
-        public ActionResult In()
-        {
-            return View();
-        }
-
-        public ActionResult Out()
+        public ActionResult Index()
         {
             return View();
         }

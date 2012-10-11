@@ -1,4 +1,14 @@
-﻿using System.Web.Mvc;
+﻿#region License
+//-----------------------------------------------------------------------
+// <copyright file="AdminAreaRegistration.cs" company="Pi2 LLC">
+//     Copyright (c) Pi2 LLC. All rights reserved.
+// </copyright>
+//-----------------------------------------------------------------------
+#endregion
+
+#region Using Directives
+using System.Web.Mvc;
+#endregion
 
 namespace Sigma.Web.Areas.Admin
 {

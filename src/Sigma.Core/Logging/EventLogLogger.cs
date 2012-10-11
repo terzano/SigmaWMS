@@ -1,5 +1,15 @@
-﻿using System;
+﻿#region License
+//-----------------------------------------------------------------------
+// <copyright file="EventLogLogger.cs" company="Pi2 LLC">
+//     Copyright (c) Pi2 LLC. All rights reserved.
+// </copyright>
+//-----------------------------------------------------------------------
+#endregion
+
+#region Using Directives
+using System;
 using System.Diagnostics;
+#endregion 
 
 namespace Sigma.Core
 {
