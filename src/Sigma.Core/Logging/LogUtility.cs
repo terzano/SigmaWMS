@@ -1,7 +1,17 @@
-﻿using System;
+﻿#region License
+//-----------------------------------------------------------------------
+// <copyright file="LogUtility.cs" company="Pi2 LLC">
+//     Copyright (c) Pi2 LLC. All rights reserved.
+// </copyright>
+//-----------------------------------------------------------------------
+#endregion
+
+#region Using Directives 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+#endregion
 
 namespace Sigma.Core
 {

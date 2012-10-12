@@ -1,4 +1,14 @@
-﻿using System.Configuration;    
+﻿#region License
+//-----------------------------------------------------------------------
+// <copyright file="Settings.cs" company="Pi2 LLC">
+//     Copyright (c) Pi2 LLC. All rights reserved.
+// </copyright>
+//-----------------------------------------------------------------------
+#endregion
+
+#region Using Directives
+using System.Configuration;
+#endregion
 
 namespace Sigma.Core
 { 

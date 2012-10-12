@@ -179,6 +179,7 @@
     <Content Include="..\Settings.config">
       <Link>Settings.config</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="..\NLog.dll.nlog">
       <Link>NLog.dll.nlog</Link>

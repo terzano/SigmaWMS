@@ -8,6 +8,8 @@
 
 #region Using Directives
 using ModelMetadataExtensions;
+using Sigma.Core.BootStrapper;
+using Sigma.Web.BootStrapper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +20,9 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using System.Web.WebPages;
+using Sigma.Core.ServiceLocator;
+//using Sigma.Domain;
+using System.Reflection;
 #endregion
 
 namespace Sigma.Web
@@ -31,6 +36,8 @@ namespace Sigma.Web
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+  
+            BootStrapperManager.Initialize(new AutofacBootStrapper(Assembly.GetExecutingAssembly(), null));
 
             DisplayModeProvider.Instance.Modes.Insert(0, new DefaultDisplayMode("MobileHtml3")
             {

@@ -1,5 +1,15 @@
-﻿using System;
+﻿#region License
+//-----------------------------------------------------------------------
+// <copyright file="NLogLogger.cs" company="Pi2 LLC">
+//     Copyright (c) Pi2 LLC. All rights reserved.
+// </copyright>
+//-----------------------------------------------------------------------
+#endregion
+
+#region Using Directives
+using System;
 using NLog;
+#endregion
 
 namespace Sigma.Core
 {

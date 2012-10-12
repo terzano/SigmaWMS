@@ -1,4 +1,14 @@
-﻿using System;
+﻿#region License
+//-----------------------------------------------------------------------
+// <copyright file="ILogger.cs" company="Pi2 LLC">
+//     Copyright (c) Pi2 LLC. All rights reserved.
+// </copyright>
+//-----------------------------------------------------------------------
+#endregion
+
+#region Using Directives 
+using System;
+#endregion
 
 namespace Sigma.Core
 {
