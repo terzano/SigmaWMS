@@ -72,6 +72,7 @@
     <Content Include="..\Settings.config">
       <Link>Settings.config</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="..\NLog.config">
       <Link>NLog.config</Link>

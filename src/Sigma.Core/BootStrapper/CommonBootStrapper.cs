@@ -33,7 +33,7 @@ namespace Sigma.Core.BootStrapper
         protected abstract IServiceLocator CreateServiceLocator(IEnumerable<string> bootTaskAssemblies);
 
         /// <summary>
-        /// Run all task in background
+        /// Prototype execute task on startup  
         /// </summary>
         protected abstract void Run();
     }

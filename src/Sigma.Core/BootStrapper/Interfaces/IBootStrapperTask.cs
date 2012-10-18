@@ -1,7 +1,7 @@
 ﻿
 namespace Sigma.Core.BootStrapper
 {
-    public interface IBootstrapperTask
+    public interface IBootStrapperTask
     {
         void Execute();
     }

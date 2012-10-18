@@ -97,6 +97,7 @@
     <Compile Include="ServiceLocator\ServiceLocatorProvider.cs" />
     <Compile Include="Settings\Interfaces\ISettings.cs" />
     <Compile Include="Settings\Settings.cs" />
+    <Compile Include="Types\DisposableBaseType.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -9,12 +9,16 @@
 #region Using Directives 
 using Autofac;
 using Autofac.Integration.Mvc;
+using Sigma.Core;
 using Sigma.Core.BootStrapper;
 using Sigma.Core.Extensibility;
 using Sigma.Core.ServiceLocator;
+using Sigma.Data.Localization;
+using Sigma.Services.Localization;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
+using System.Web.Compilation;
 using System.Web.Mvc;
 #endregion
 
@@ -45,7 +49,16 @@ namespace Sigma.Web.BootStrapper
             builder.RegisterFilterProvider();
             
             // Perform Registrations Here...
-            //builder.RegisterType<Person>().As<IPerson>();
+            // -----------------------------------------------------------------------
+            // Core Utilities
+            builder.RegisterType<NLogLogger>().As<ILogger>().InstancePerHttpRequest();
+            builder.RegisterType<Settings>().As<ISettings>().InstancePerHttpRequest();
+         
+            // Localization 
+            builder.RegisterType<ResourceService>().As<IResourceService>().InstancePerHttpRequest();
+            builder.RegisterType<ResourceRepository>().As<IResourceRepository>().InstancePerHttpRequest();
+            builder.RegisterType<ResourceProviderFactory>().AsSelf();
+            builder.RegisterType<DbResourceProvider>().As<IResourceProvider>().InstancePerHttpRequest();
 
             // Register Bootstrapper tasks based on the assemblies passed. 
             if (bootTaskAssemblies != null)
@@ -53,7 +66,7 @@ namespace Sigma.Web.BootStrapper
                 foreach (string asm in bootTaskAssemblies)
                 {
                     var assembly = Assembly.Load(asm);
-                    RegisterFromAssembly(builder, assembly, typeof(IBootstrapperTask));
+                    RegisterFromAssembly(builder, assembly, typeof(IBootStrapperTask));
                 }
             }
             
@@ -78,7 +91,7 @@ namespace Sigma.Web.BootStrapper
         /// </summary>
         protected override void Run()
         {
-            var listTask = IoC.GetAllInstances<IBootstrapperTask>();
+            var listTask = IoC.GetAllInstances<IBootStrapperTask>();
 
             if (listTask != null)
             {

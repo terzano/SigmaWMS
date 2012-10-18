@@ -37,6 +37,7 @@ namespace Sigma.Web
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
   
+            // Boostrap application and make Autofac the DI container. 
             BootStrapperManager.Initialize(new AutofacBootStrapper(Assembly.GetExecutingAssembly(), null));
 
             DisplayModeProvider.Instance.Modes.Insert(0, new DefaultDisplayMode("MobileHtml3")
