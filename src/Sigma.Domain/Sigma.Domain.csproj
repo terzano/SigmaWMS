@@ -42,6 +42,12 @@
     <Compile Include="..\CommonAssemblyInfo.cs">
       <Link>CommonAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="Identity\Enums.cs" />
+    <Compile Include="Identity\Identity.cs" />
+    <Compile Include="Identity\Interfaces\IEntity.cs" />
+    <Compile Include="Identity\Interfaces\INamedEntity.cs" />
+    <Compile Include="Identity\Role.cs" />
+    <Compile Include="Identity\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
