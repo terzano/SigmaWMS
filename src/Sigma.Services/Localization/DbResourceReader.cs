@@ -1,9 +1,19 @@
-﻿using Sigma.Core.Types;
+﻿#region License
+//-----------------------------------------------------------------------
+// <copyright file="DbResourceReader.cs" company="Pi2 LLC">
+//     Copyright (c) Pi2 LLC. All rights reserved.
+// </copyright>
+//-----------------------------------------------------------------------
+#endregion
+
+#region Using Directives 
+using Sigma.Core.Types;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Resources;
+#endregion
 
 namespace Sigma.Services.Localization
 {

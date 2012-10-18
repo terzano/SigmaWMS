@@ -1,6 +1,6 @@
 ﻿#region License
 //-----------------------------------------------------------------------
-// <copyright file="DBResourceProviderFactory.cs" company="Pi2 LLC">
+// <copyright file="DbResourceProviderFactory.cs" company="Pi2 LLC">
 //     Copyright (c) Pi2 LLC. All rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------

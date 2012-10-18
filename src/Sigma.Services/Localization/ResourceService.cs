@@ -1,11 +1,17 @@
-﻿using Sigma.Data.Localization;
+﻿#region License
+//-----------------------------------------------------------------------
+// <copyright file="ResourceService.cs" company="Pi2 LLC">
+//     Copyright (c) Pi2 LLC. All rights reserved.
+// </copyright>
+//-----------------------------------------------------------------------
+#endregion
+
+#region Using Directives 
+using Sigma.Data.Localization;
 using System;
-using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+#endregion
 
 namespace Sigma.Services.Localization
 {

@@ -1,14 +1,21 @@
-﻿using Sigma.Core.ServiceLocator;
+﻿#region License
+//-----------------------------------------------------------------------
+// <copyright file="DbResourceProvider.cs" company="Pi2 LLC">
+//     Copyright (c) Pi2 LLC. All rights reserved.
+// </copyright>
+//-----------------------------------------------------------------------
+#endregion
+
+#region Using Directives 
+using Sigma.Core.ServiceLocator;
 using Sigma.Core.Types;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Globalization;
-using System.Linq;
 using System.Resources;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web.Compilation;
+#endregion 
 
 namespace Sigma.Services.Localization
 {
