@@ -85,7 +85,12 @@
     <Compile Include="Exceptions\ActivationException.cs" />
     <Compile Include="Extensibility\Interfaces\IPlugin.cs" />
     <Compile Include="Extensions\CollectionExtensions.cs" />
+    <Compile Include="Extensions\ConverterExtensions.cs" />
+    <Compile Include="Extensions\DynamicExtensions.cs" />
     <Compile Include="Extensions\EnumExtensions.cs" />
+    <Compile Include="Helpers\DynamicHelpers.cs" />
+    <Compile Include="Helpers\EnumHelpers.cs" />
+    <Compile Include="Helpers\TypeHelpers.cs" />
     <Compile Include="Logging\EventLogLogger.cs" />
     <Compile Include="Logging\Interfaces\ILogger.cs" />
     <Compile Include="Logging\LogUtility.cs" />

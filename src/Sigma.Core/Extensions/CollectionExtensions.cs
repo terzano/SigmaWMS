@@ -6,10 +6,10 @@
 //-----------------------------------------------------------------------
 #endregion
 
-#region Using Directives 
+#region Using Directives
 using System.Collections.Generic;
 using System.ComponentModel;
-#endregion 
+#endregion
 
 namespace Sigma.Core.Extensions
 {
@@ -31,6 +31,20 @@ namespace Sigma.Core.Extensions
                 result.Add(property.Name, property.GetValue(obj));
             }
             return result;
+        }
+
+        public static TValue GetValueOrDefault<TKey, TValue>(this Dictionary<TKey, TValue> dict,
+           TKey key, TValue defaultIfNotFound = default(TValue))
+        {
+            TValue value;
+
+            // value will be the result or the default for TValue
+            if (!dict.TryGetValue(key, out value))
+            {
+                value = defaultIfNotFound;
+            }
+
+            return value;
         }
     }
 }

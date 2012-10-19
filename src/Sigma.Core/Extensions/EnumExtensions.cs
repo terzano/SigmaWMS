@@ -1,10 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
+﻿#region License
+//-----------------------------------------------------------------------
+// <copyright file="EnumExtensions.cs" company="Pi2 LLC">
+//     Copyright (c) Pi2 LLC. All rights reserved.
+// </copyright>
+//-----------------------------------------------------------------------
+#endregion
+
+#region Using Directives 
+using System;
 using System.ComponentModel;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
+#endregion
 
 namespace Sigma.Core.Extensions
 {
