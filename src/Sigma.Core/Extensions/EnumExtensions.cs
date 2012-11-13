@@ -32,5 +32,10 @@ namespace Sigma.Core.Extensions
             return attribs.Length > 0 ? attribs[0].Description : null;
         }
 
+        public static T ToEnum<T>(this string enumString)
+        {
+            return (T)Enum.Parse(typeof(T), enumString);
+        }
+
     }
 }

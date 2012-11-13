@@ -78,7 +78,7 @@
     </Reference>
     <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20715.0\lib\net40\System.Web.Razor.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
@@ -107,12 +107,14 @@
       <Link>CommonAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="ActionResults\ChartResults.cs" />
+    <Compile Include="ActionResults\NotFoundResult.cs" />
     <Compile Include="BootStrapper\AutofacBootStrapper.cs" />
     <Compile Include="Extensions\ChartExtensions.cs" />
     <Compile Include="Extensions\HtmlExtensions.cs" />
     <Compile Include="Extensions\ListExtensions.cs" />
     <Compile Include="Extensions\LocalizationExtensions.cs" />
     <Compile Include="Extensions\ViewDataExtensions.cs" />
+    <Compile Include="Filters\AjaxOnlyAttribute.cs" />
     <Compile Include="Helpers\AuthTicketHelper.cs" />
     <Compile Include="Helpers\CookieHelpers.cs" />
     <Compile Include="Helpers\ConverterHelpers.cs" />
@@ -147,7 +149,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Filters\" />
     <Folder Include="ModelBinders\" />
     <Folder Include="Validators\" />
     <Folder Include="ViewEngines\" />
