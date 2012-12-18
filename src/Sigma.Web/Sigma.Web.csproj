@@ -60,13 +60,17 @@
     <Reference Include="Elmah">
       <HintPath>..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
     </Reference>
+    <Reference Include="Elmah.Mvc, Version=2.0.0.37642, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Elmah.MVC.2.0.2\lib\net40\Elmah.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="ModelMetadataExtensions">
       <HintPath>..\packages\ModelMetadataExtensionsWithBugfix.0.1.2\lib\net40\ModelMetadataExtensions.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Newtonsoft.Json.4.5.10\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="RouteDebugger">
       <HintPath>..\packages\routedebugger.2.1.4.0\lib\net40\RouteDebugger.dll</HintPath>
@@ -182,9 +186,6 @@
       <Link>NLog.dll.nlog</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Public\js\lib\jquery.intellisense.js">
-      <DependentUpon>jquery.js</DependentUpon>
-    </None>
     <Content Include="Public\css\bootstrap\img\glyphicons-halflings-white.png" />
     <Content Include="Public\css\bootstrap\img\glyphicons-halflings.png" />
     <Content Include="Public\css\bootstrap\styles\bootstrap-responsive.css" />
@@ -333,15 +334,10 @@
     <Content Include="Public\js\lib\jquery.hotkeys.min.js">
       <DependentUpon>jquery.hotkeys.js</DependentUpon>
     </Content>
-    <Content Include="Public\js\lib\jquery.js" />
-    <Content Include="Public\js\lib\jquery.min.js">
-      <DependentUpon>jquery.js</DependentUpon>
-    </Content>
     <Content Include="Public\js\lib\jquery.tinycarousel.js" />
     <Content Include="Public\js\lib\jquery.tinycarousel.min.js">
       <DependentUpon>jquery.tinycarousel.js</DependentUpon>
     </Content>
-    <Content Include="Public\js\lib\jquery.tipTip.min.js" />
     <Content Include="Public\js\lib\jquery.unobtrusive-ajax.js" />
     <Content Include="Public\js\lib\jquery.unobtrusive-ajax.min.js">
       <DependentUpon>jquery.unobtrusive-ajax.js</DependentUpon>
@@ -475,6 +471,13 @@
     <Content Include="Public\js\ui\jquery.mobile.min.js">
       <DependentUpon>jquery.mobile.js</DependentUpon>
     </Content>
+    <None Include="Public\js\lib\jquery.intellisense.js">
+      <DependentUpon>jquery.js</DependentUpon>
+    </None>
+    <Content Include="Public\js\lib\jquery.js" />
+    <Content Include="Public\js\lib\jquery.min.js">
+      <DependentUpon>jquery.js</DependentUpon>
+    </Content>
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -513,6 +516,7 @@
     <Folder Include="Public\img\" />
     <Folder Include="Public\js\core\" />
     <Folder Include="Public\js\page\" />
+    <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Sigma.Core\Sigma.Core.csproj">
@@ -560,7 +564,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>53291</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:62027/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
